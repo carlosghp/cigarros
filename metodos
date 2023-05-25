@@ -1,0 +1,38 @@
+import java.util.ArrayList;
+
+public class cigarro {
+
+  static ArrayList <cigarro> cigarros = new ArrayList<>();
+  //al064415@uacam.mx
+  static double tiempopicado = 1.0 + 5.0; 
+  static double cantidadhojas = 15.0;
+  static double cantidadaroma = 06.0;
+  static double cantidadazucar = 44.0;
+  static double cantidadnicotina = 0.0 + 5.0;
+  
+  public static void tiposcigarros() {
+    cigarros.add(new cigarro(tiempopicado, cantidadhojas, cantidadaroma, cantidadazucar, cantidadnicotina));
+    System.out.println(cigarros.toString());
+    
+  }
+  
+  public static void picadodesvenado() { 
+      int i;
+    for(i = 0; i <=  tiempopicado; i++) {
+          double picadodesvenado = cantidadhojas / i;
+      System.out.println("picado y desvenado = " + picadodesvenado);
+      }
+  }
+  
+  public static void productototal() {
+    double sumatotal = tiempopicado + cantidadhojas + cantidadaroma + cantidadazucar + cantidadnicotina;
+    System.out.println("producto total = " + sumatotal + " cigarros generados");
+  }
+
+    private cigarro(double tiempopicado, double cantidadhojas, double cantidadaroma, double cantidadazucar, double cantidadnicotina) {
+    }
+    public static void main(String[] args) {
+      tiposcigarros();
+      productototal(); 
+    }
+}
